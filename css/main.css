@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Creepster&display=swap');
+
+*{
+    background-color: rgb(37, 36, 36);
+    font-family:'Creepster',sans-serif;
+    padding: 0;
+    margin: 0;
+    transition: all 0.3s;
+    justify-content: center;
+   
+}
+/* html{
+    width: 1400px;
+} */
+
+h1{
+    height: 80px;
+    background: rgb(224, 218, 218);
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    font-size: 50px;
+}
+h2{
+    color: rgb(174, 168, 168);
+    /* display: flex; */
+}
+a{
+    text-decoration: none;
+}
+.Artists{
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.Artists .card{
+    padding: 10px 25px;
+    margin: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px; 
+    margin-bottom: 70px;
+}
+img{
+    width: 300px;
+    border-radius: 1000px;
+    margin-bottom: 35px;
+
+}
+  
+a:hover img{
+    filter: brightness(10%);
+}
+.authors{
+    height: 60px;
+    background: rgb(224, 218, 218);
+    font-size: 30px;
+    align-items: center;
+    display: flex;
+
+
+}
+footer .authors a{
+    color: black;
+    text-decoration: none;
+    background-color: #ccc;
+    font-size: 30px;
+    
+    
+}
+.Error .code, .Error .text{
+    display: flex;
+    justify-content: center;
+    font-size: 100px;
+
+}
+
+.home{
+    margin-top: 100px !important;
+    font-size: 50px;
+    text-align: left;
+    margin-top: 30px;
+    margin-left: 30px;
+    color: rgb(173, 171, 171);
+}
+@media (max-width:811px) {
+   html{
+    width: auto;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+   }
+   header h1{
+    font-size: 40px;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+   }
+  
+
+    
+}
+
+
+/* header, body {
+    overflow-x: hidden; 
+    overflow-y: auto;
+} */

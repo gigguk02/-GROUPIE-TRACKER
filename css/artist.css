@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Creepster&display=swap');
+
+*{
+    background-color: rgb(37, 36, 36);
+    font-family:'Creepster',sans-serif;
+    padding: 0;
+    margin: 0;
+    color: rgb(173, 171, 171);
+    justify-content: center;
+    text-align: center;
+    transition: all 0.3s;
+   
+}
+header{
+    font-size: 50px;
+    text-align: left;
+    margin-top: 30px;
+    margin-left: 30px;
+}
+header .home{
+    text-decoration: none;
+}
+header .home:hover{
+    color: rgb(22, 22, 22);
+}
+/* h1{
+    margin-top: 20px;
+   font-size: 50px;
+   text-align: center;
+} */
+.band-card{
+    margin: 20px;
+    padding: 80px;
+}
+
+img{
+    width: 250px;
+    border-radius: 1000px;
+    
+}
+.band-card .imgWithInf .band-name{
+    margin-bottom: 50px;
+    font-size: 40px;
+    margin-top: 20px;
+
+
+}
+.band-card .imgWithInf .image{
+    padding: 40px 25px;
+    border: 1px solid #ccc;
+    border-radius: 5px; 
+    margin-bottom: 25px;
+
+}
+
+.band-card .correct{
+    display: flex;
+}
+.band-card .imgWithInf .info{
+    text-align: center;
+    font-size: 25px;
+}
+.band-card .imgWithInf .info{
+    text-align: center;
+    font-size: 25px;
+}
+.band-card .members{
+    margin-top: 90px;
+    padding-left: 200px;
+    font-size: 25px;
+    margin-right: 10px; 
+    padding-right: 200px;
+}
+
+.band-card .date-location{
+    margin-top: 90px;
+    font-size: 25px;
+}
+@media (max-width:1073px){
+    .band-card .imgWithInf {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    
+    .band-card .correct{
+        display: block;
+    }
+    .band-card .imgWithInf .image{
+        margin-bottom: 90px;
+       
+    
+    }
+    .band-card .members{
+        text-align: center;
+        padding-left: 0px;
+        font-size: 25px;
+        margin-right: 0px; 
+        padding-right: 0px;
+    }
+
+}

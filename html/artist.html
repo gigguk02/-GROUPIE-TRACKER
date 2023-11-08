@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/artist.css">
+    <title>{{.Art.Name}}</title>
+</head>
+<header>
+    <a href="/" class="home">Home</a>
+
+</header>
+<body>
+    <div class="band-card">
+        <div class="correct">
+            <div class="imgWithInf">
+                <h1 class="band-name">{{.Art.Name}}</h1>
+                <div class="image">
+                    <img src="{{.Art.Image}}" alt="{{.Art.Name}}" >
+                </div>
+                
+                <div class="info">
+                    <h4 class="creation_date">Creation Date:</h4>
+                    <div class="creation_date">{{.Art.CreationDate}}</div>
+                    <h4 class="firstAlbum">First Album:</h4>
+                    <div class="firstAlbum">
+                        {{.Art.FirstAlbum}}
+                </div>
+            </div>
+    
+
+        </div>
+         <div class="members">
+            <br>
+            <h4 class="band-members">Members:</h4>
+            <br>
+
+            {{range .Art.Members}}
+                {{.}}
+                <br>
+            {{end}}
+         </div>
+    
+            
+         <div class="date-location">
+           <!-- {{range $key,$value:= .Rel.LocationAndDate}}
+           {{$key}}:{{$value}}
+           {{end}} -->
+           <br>
+           <h4>Location and Date:</h4>
+           <br>
+           {{range $key, $value:= .Rel.LocationAndDate}}
+           {{$key}}:
+           {{range $value}}
+           {{.}}
+           <br>
+           {{end}}
+           {{end}}
+         </div>
+    <div>
+
+    
+    
+</body>
+</html>
