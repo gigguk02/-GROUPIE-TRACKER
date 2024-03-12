@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="/static/homePage.css">
+    <title>Groupie-Tracker</title>
+</head>
+
+<body>
+    <header>
+        <a href="/"><h1>Groupie-Tracker</h1></a>
+    </header>
+    <form class="messageFromUser" action="/search" method="post">
+        <div class="search">Search: 
+            <input list="search" class="input" name="search" value="{{.Client}}">
+            <datalist id="search" >
+                {{range .Art}}
+                <option value="{{ .Name}}">{{.Name}} - artist/band name</option>
+                {{range .Members}}
+                <option value="{{.}}">{{.}} - member</option>
+                {{end}}
+                <option value="{{.FirstAlbum}}">{{.FirstAlbum}} - first album date</option>
+                {{end}}
+                {{range .Relation}}
+                <option value="{{.}}">{{.}} - location</option>
+                {{end}}
+                {{range .CreationDate}}
+                <option value="{{.}}">{{.}} - creation date</option>
+                {{end}}
+
+            </datalist>
+            <button class="submit">
+                submit
+            </button>
+        </div>
+    </form>
+    <div class="filter">
+        <form action="/filter" method="post">
+            <div class="creatDate">
+                Creation Date:
+                <br>
+                <label>From:</label>
+                <input type="number" name="createDateStart" min="{{.MaxCreateDate}}" value="{{.MaxCreateDate}}">
+                <label>To:</label>
+                <input type="number" name="createDateEnd" max="{{.MinCreateDate}}" value="{{.MinCreateDate}}">
+            </div>
+            <div class="firstAlbum">
+                First Album:
+                <br>
+                <label>From:</label>
+                <input type="number" name="firstAlbumStart" min="{{.MinFirstAlbum}}" value="{{.MinFirstAlbum}}">
+                <label>To:</label>
+                <input type="number" name="firstAlbumEnd" max="{{.MaxFirstAlbum}}" value="{{.MaxFirstAlbum}}">
+            </div>
+            <div class="contOfMembers">
+                <label>Number of Members:</label><br>
+                <input type="checkbox" name="member" value="1"> <span>1</span>
+                <input type="checkbox" name="member" value="2"> <span>2</span>
+                <input type="checkbox" name="member" value="3"> <span>3</span>
+                <input type="checkbox" name="member" value="4"> <span>4</span>
+                <input type="checkbox" name="member" value="5"> <span>5</span>
+                <input type="checkbox" name="member" value="6"> <span>6</span>
+                <input type="checkbox" name="member" value="7"> <span>7</span>
+            </div>
+            <div class="locations">
+                <label>Location:</label>
+                <select id="location" name="location">
+                    <option value="">Select location</option>
+                    {{range .Relation}}
+                    <option value="{{.}}">{{.}} - location</option>
+                    {{end}}
+                </select>
+            </div>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+    
+    <div class="correct">
+        <div class="Artists">
+            {{range  .SearchArtist}}
+            <div class="card">
+                <a href="/artist?id={{.Id}}">
+                    <br>
+                    <h2 class="card-title" align="center">{{.Name}}</h2>
+                    <br>
+                    <br>
+                    <img src="{{.Image}}" alt="{{.Name}}">
+                </a>
+            </div>
+            {{end}}
+    
+        </div>
+    </div>
+    
+    <footer>
+        <div class="author">Author: 
+            <a href="https://01.alem.school/git/gbekbola"> gbekbola, </a>
+            <a href="https://01.alem.school/git/mlaikhkh"> mlaikhkh</a>
+        </div>
+    </footer>
+    
+    
+</body>
+
+</html>

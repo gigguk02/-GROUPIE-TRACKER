@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Creepster&display=swap');
+
+*{
+    background-color: rgb(37, 36, 36);
+    font-family:'Creepster',sans-serif;
+    padding: 0;
+    margin: 0;
+    transition: all 0.3s;
+    justify-content: center;
+   
+}
+/* html{
+    width: 1400px;
+} */
+/* body{
+    padding: 250px;
+} */
+h1{
+    height: 80px;
+    background: rgb(224, 218, 218);
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    font-size: 50px;
+    color: black;
+}
+h2{
+    color: rgb(174, 168, 168);
+    /* display: flex; */
+}
+a{
+    text-decoration: none;
+}
+.Artists{
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.Artists .card{
+    padding: 10px 25px;
+    margin: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px; 
+    margin-bottom: 70px;
+}
+img{
+    width: 300px;
+    border-radius: 1000px;
+    margin-bottom: 35px;
+
+}
+  
+a:hover img{
+    filter: brightness(10%);
+}
+.author{
+    height: 60px;
+    background: rgb(224, 218, 218);
+    font-size: 30px;
+    align-items: center;
+    display: flex;
+
+
+}
+footer .author a{
+    color: black;
+    text-decoration: none;
+    background-color: #ccc;
+    font-size: 30px;
+    
+    
+}
+.Error .code, .Error .text{
+    display: flex;
+    justify-content: center;
+    font-size: 100px;
+
+}
+
+.home{
+    margin-top: 100px !important;
+    font-size: 50px;
+    text-align: left;
+    margin-top: 30px;
+    margin-left: 30px;
+    color: rgb(173, 171, 171);
+}
+@media (max-width:811px) {
+   html{
+    width: auto;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+   }
+   header h1{
+    font-size: 40px;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+   }
+   .Error .code, .Error .text{
+    font-size: 40px;
+    text-align: center;
+
+}
+    
+}
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+@media (min-width:811px) {
+    .Artists{
+        padding-left: 250px;
+        padding-right: 250px;
+       
+    }
+    .Artists .card{
+        margin: 40px;
+        
+    }
+    
+}
+.search{
+    margin-top: 30px;
+    text-align: center;
+    color: #ccc;
+    font-size: 30px;
+
+}
+.search .input{
+    color: #ccc;
+    font-size: 24px;
+    width: 500px;
+}
+.submit{
+    font-size: 25px;
+    color:#ccc;
+    padding-left: 25px;
+    padding-right: 25px;
+    margin-left: 3px;
+}
+button.submit:hover{
+    background-color: black;
+}
+/* header, body {
+    overflow-x: hidden; 
+    overflow-y: auto;
+} */
+.filter {
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: #222;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.filter form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+}
+
+.filter label {
+    font-weight: bold;
+}
+
+.filter input[type="number"],
+.filter select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: #333;
+    color: #fff;
+    font-size: 20px;
+}
+
+.filter .creatDate,
+.filter .firstAlbum,
+.filter .contOfMembers,
+.filter .locations {
+    margin-bottom: 25px;
+}
+.filter .creatDate,
+.filter .firstAlbum{
+    border: 2px solid #ccc; 
+    padding: 13px;
+    border-radius: 4px;
+    
+}
+
+.filter .contOfMembers input[type="checkbox"] {
+    margin-right: -1px;
+}
+
+.filter .locations select {
+    width: 100%;
+}
+
+.filter input[type="submit"] {
+    color: #ccc;
+    padding: 10px 20px;
+    border: 2px solid #ccc; 
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 20px;
+    
+}
+
+input[type="submit"]:hover {
+    background-color: black;
+}
+
+.filter .creatDate label,
+.filter .firstAlbum label {
+    display: inline-block;
+    margin-right: 10px;
+    margin-top: 25px;
+}
+label{
+    color: #ccc;
+    font-size: 25px;
+}
+span{
+    font-size: 20px;
+    color: #ccc;
+    padding-right: 7px;
+}
+.creatDate,
+.firstAlbum{
+    font-size: 25px;
+    color: #ccc;
+}

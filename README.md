@@ -5,15 +5,26 @@
 
 #### Description:
 
-Groupie Trackers consists on receiving a given API and manipulate the data contained in it, in order to create a site, displaying the information.
-And build a user friendly website where you can display the bands info through several data visualizations.
+You must follow the same principles as the first subject.
+
+    - Groupie Tracker Filters consists on letting the user filter the artists/bands that will be shown.
+
+    - Your project must incorporate at least these four filters:
+        - filter by creation date
+        - filter by first album date
+        - filter by number of members
+        - filter by locations of concerts
+
+    - Your filters must be of at least these two types:
+        - a range filter (filters the results between two values)
+        - a check box filter (filters the results by one or multiple selection)
 
 
 
 ## Usage/Examples
 Run a program:
 ```CMD/Terminal 
-go run . 
+go run ./cmd 
 ```
 
 Follow the link on the terminal:

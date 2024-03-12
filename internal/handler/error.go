@@ -1,4 +1,4 @@
-package handle
+package handler
 
 import (
 	"net/http"
@@ -13,14 +13,15 @@ func Errors(w http.ResponseWriter, code int) {
 		ErrorCode: code,
 		ErrorText: http.StatusText(code),
 	}
-	tmpl, err := template.ParseFiles("html/error.html")
+	tmpl, err := template.ParseFiles("template/error.html")
 	if err != nil {
 		http.Error(w, http.StatusText(http.StatusInternalServerError), http.StatusInternalServerError)
+		return
 
 	}
 	if err1 := tmpl.Execute(w, errors); err1 != nil {
 		http.Error(w, http.StatusText(http.StatusInternalServerError), http.StatusInternalServerError)
+		return
 
 	}
-
 }
